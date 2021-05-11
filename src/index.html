@@ -12,6 +12,11 @@
 </head>
 
 <body class="d-flex flex-column bg-light" id="body">
+  <div style="visibility: hidden">
+    <!-- The anchor points to the id of the element -->
+  <a href="#main" >Skip to main content</a>
+  <a href="#footer">Skip to footer</a>
+  </div>
     <div class="container-fluid d-none d-lg-block my-4 header" role="banner">
         <div class="container">
             <div class="row no-gutters">
@@ -123,13 +128,13 @@
         <div class="row no-gutters">
             <div class="col-12 col-lg-6">
                 <div class="p-4 mt-4 mr-lg-3 bg-white news">
-                    <div class="text-primary mb-4 title">News &amp; events</div>
+                    <div class="text-primary mb-4 title"><h1>News &amp; events</h1></div>
                     <div class="media mt-4">
                         <img class="my-1 mr-2 rounded-right" src="./img/iceberg.jpg">
-                        <div class="media-body">
-                            <div class="text-info mt-0 mb-2 subtitle">
-                                <a href="./article.html" role="button">Global temperature record</a>
-                            </div>
+
+                            <article aria-labelledby="article-title-1">
+                                <h2 id="article-title-1"><a href="./article.html" role="button">Global temperature record</a></h2>
+
                             <p>
                                 The global surface temperature relative to 1951-1980 average recently published by NASA shows that 2016 ranks as the warmest
                                 year on record.
@@ -137,14 +142,15 @@
                             <div class="my-3 text-secondary text-right">
                                 <div>2018/01/15</div>
                             </div>
-                        </div>
+                          </article>
+
                     </div>
                     <div class="media mt-4">
                         <img class="my-1 mr-2 rounded-right" src="./img/universe.jpg">
-                        <div class="media-body">
-                            <div class="text-info mt-0 mb-2 subtitle">
-                                <a href="./empty.html?title=Article" role="button">At iam decimum annum in spelunca iacet</a>
-                            </div>
+
+                            <article aria-labelledby="article-title-2">
+                                <h2 id="article-title-2"><a href="./empty.html?title=Article" role="button">At iam decimum annum in spelunca iacet</a></h2>
+
                             <p>
                                 Immo vero, inquit, ad beatissime vivendum parum est, ad beate vero satis. Claudii libidini, qui tum erat summo ne imperio,
                                 dederetur. Ergo id est convenienter naturae vivere, a natura discedere.
@@ -152,14 +158,15 @@
                             <div class="my-3 text-secondary text-right">
                                 <div>2018/01/12</div>
                             </div>
-                        </div>
+                          </article>
+
                     </div>
                     <div class="media mt-4">
                         <img class="my-1 mr-2 rounded-right" src="./img/robots.jpg">
-                        <div class="media-body">
-                            <div class="text-info mt-0 mb-2 subtitle">
-                                <a href="./empty.html?title=Article" role="button">Quo plebiscito decreta a senatu est consuli quaestio Cn</a>
-                            </div>
+
+                            <article aria-labelledby="article-title-3">
+                                <h2 id="article-title-3"><a href="./empty.html?title=Article" role="button">Quo plebiscito decreta a senatu est consuli quaestio Cn</a></h2>
+
                             <p>
                                 Comprehensum, quod cognitum non habet? Quia nec honesto quic quam honestius nec turpi turpius. Maximeque eos videre possumus
                                 res gestas audire et legere velle, qui a spe gerendi absunt confecti senectute. Est enim
@@ -168,13 +175,14 @@
                             <div class="my-3 text-secondary text-right">
                                 <div>2017/12/30</div>
                             </div>
-                        </div>
+                          </article>
+
                     </div>
                 </div>
             </div>
             <div class="col-12 col-lg-6">
                 <div class="p-4 mt-4 bg-white studies">
-                    <div class="text-primary mb-4 title">Studies</div>
+                    <div class="text-primary mb-4 title"><h1>Studies</h1></div>
                     <p class="font-weight-bold">Advance your scientific education</p>
                     <div class="list-unstyled ml-3">
                         <p>
@@ -190,7 +198,7 @@
                 </div>
 
                 <div class="p-4 mt-4 bg-white researches">
-                    <div class="text-primary mb-4 title">Researches</div>
+                    <div class="text-primary mb-4 title"><h1>Researches</h1></div>
                     <p class="font-weight-bold">Join our renowned research groups</p>
                     <p class="ml-3">
                         <a href="./empty.html?title=Doctorate" role="button">Doctoral programmes</a>
@@ -219,7 +227,7 @@
         </div>
     </div>
 
-    <div class="container-fluid bg-dark mt-4 footer" role="contentinfo">
+    <div class="container-fluid bg-dark mt-4 footer" id="footer" role="contentinfo">
         <div class="container text-center py-3">
             <div class="row justify-content-around">
                 <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=About" role="button">About</a>
