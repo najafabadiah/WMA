@@ -12,15 +12,17 @@
 </head>
 
 <body class="d-flex flex-column bg-light">
-	<a id="skip-nav" class="screenreader-text" href="#nav-bar-content"> Skip to navigation </a>
-	<a id="skip-main" class="screenreader-text" href="#main"> Skip to main content </a>
-	<a id="skip-footer" class="screenreader-text" href="#footer"> Skip to footer </a>
+	<div class="skip-to-content">
+        <!-- The anchor points to the id of the element -->
+      <a href="#main">Skip to main content</a>
+      <a href="#footer">Skip to footer</a>
+    </div>
 	
-    <div class="container-fluid d-none d-lg-block my-4 header">
+    <div class="container-fluid d-none d-lg-block my-4 header" role="banner" aria-label="banner">
         <div class="container">
             <div class="row no-gutters">
-                <div class="col-8 media" role="banner">
-                    <img class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg" alt="" role="img">
+                <div class="col-8 media">
+                    <img class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg" alt="logo of the website" role="img">
                     <div class="media-body align-self-center">
                         <div class="mb-0 title" role="heading">Lorem Ipsum
                             <br>Institute of Technology
@@ -30,8 +32,8 @@
                 <div class="col-4">
                     <div class="btn-toolbar justify-content-end">
                         <div class="btn-group btn-group-sm">
-                            <button class="btn btn-dark font-increase-button" id="font-increase-button" role="button" aria-label="Font increase">A+</button>
-                            <button class="btn btn-dark font-decrease-button" id="font-decrease-button" role="button" aria-label="Font decrease">A-</button>
+                            <button class="btn-lg btn-dark font-increase-button" id="font-increase-button" aria-label="increase the font size">A+</button>
+                            <button class="btn-lg btn-dark font-decrease-button" id="font-decrease-button" aria-label="decrease the font size">A-</button>
                         </div>
                     </div>
                 </div>
@@ -39,68 +41,91 @@
         </div>
     </div>
 
-    <nav class="container-fluid bg-dark nav" role="navigation" aria-label="Main">
+    <nav class="container-fluid bg-dark nav" role="navigation" aria-label="navigation">
         <div class="container">
             <div class="navbar navbar-dark bg-dark navbar-expand-lg px-0">
                 <div class="navbar-brand d-lg-none">
-                    <img class="rounded-right" src="./img/logo.jpg" alt="" width="40" height="40">
+                    <img class="rounded-right" src="./img/logo.jpg" width="40" height="40" alt="logo of the website" role="img">
                 </div>
-                <button class="navbar-toggler" type="button">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" aria-label="Toggle Button"></span>
                 </button>
-                <ul class="collapse navbar-collapse" id="nav-bar-content">
-                    <div class="navbar-nav mr-auto">
-                        <div class="nav-item">
-                            <li><a class="nav-link" href="./index.html">Homepage</a></li>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <li><a class="nav-link dropdown-toggle" href="#" id="nav-bar-faculties">Faculties</a></li>
+                <div class="collapse navbar-collapse" id="nav-bar-content" aria-label="Main Navigation">
+                    <ul class="navbar-nav mr-auto" aria-label="Main menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./" role="button">Homepage</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-faculties" role="button" aria-haspopup="true" aria-expanded="false">Faculties</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./empty.html?title=Applied+sciences">Applied sciences</a></li>
-                                <li><a class="dropdown-item" href="./empty.html?title=Architecture+%26+planning">Architecture &amp; planning</a></li>
-                                <li><a class="dropdown-item" href="./empty.html?title=Construction+%26+environment">Construction &amp; environment</a></li>
-                                <li><a class="dropdown-item" href="./empty.html?title=Engineering">Engineering</a></li>
-                                <li><a class="dropdown-item" href="./empty.html?title=Health+%26+social+sciences">Health &amp; social sciences</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="./empty.html?title=Applied+sciences" role="button">Applied sciences</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./empty.html?title=Architecture+%26+planning" role="button">Architecture &amp; planning</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./empty.html?title=Construction+%26+environment" role="button">Construction &amp; environment</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./empty.html?title=Engineering" role="button">Engineering</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./empty.html?title=Health+%26+social+sciences" role="button">Health &amp; social sciences</a>
+                                </li>
                             </ul>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <li><a class="nav-link dropdown-toggle" href="#" id="nav-bar-education">Education &amp; research</a></li>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-education" role="button" aria-haspopup="true" aria-expanded="false">Education &amp; research</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./empty.html?title=Bachelor">Bachelor</a></li>
-                                <li><a class="dropdown-item" href="./empty.html?title=Master">Master</a></li>
-                                <li><a class="dropdown-item" href="./empty.html?title=Continuing+education">Continuing education</a></li>
-                                <li><a class="dropdown-item" href="./empty.html?title=Doctorate">Doctorate</a></li>
-
+                                <li>
+                                    <a class="dropdown-item" href="./empty.html?title=Bachelor" role="button">Bachelor</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./empty.html?title=Master" role="button">Master</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./empty.html?title=Continuing+education" role="button">Continuing education</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./empty.html?title=Doctorate" role="button">Doctorate</a>
+                                </li>
                             </ul>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <li><a class="nav-link dropdown-toggle" href="#" id="nav-bar-industry">Industry &amp; partners</a></li>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-industry" role="button" aria-haspopup="true" aria-expanded="false">Industry &amp; partners</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./empty.html?title=Public+relations">Public relations</a></li>
-                                <li><a class="dropdown-item" href="./empty.html?title=Commercialization">Commercialization</a></li>
-                                <li><a class="dropdown-item" href="./empty.html?title=Sponsors+%26+partners">Sponsors &amp; partners</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="./empty.html?title=Public+relations" role="button">Public relations</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./empty.html?title=Commercialization" role="button">Commercialization</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./empty.html?title=Sponsors+%26+partners" role="button">Sponsors &amp; partners</a>
+                                </li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="navbar-nav">
-                        <div class="nav-item">
-                            <li><a class="nav-link" href="./login.html" aria-label="Login">Login</a></li>
-                        </div>
-                    </div>
-                </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav" aria-label="Login menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./login.html" role="button">Login</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="d-lg-none">
                 <div class="btn-toolbar justify-content-end">
                     <div class="btn-group btn-group-sm">
-                        <button class="btn btn-dark text-white font-increase-button" id="font-increase-button-1" role="button" aria-label="Font increase">A+</button>
-                        <button class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1" role="button" aria-label="Font decrease">A-</button>
+                        <button class="btn btn-dark text-white font-increase-button" id="font-increase-button-1">A+</button>
+                        <button class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1">A-</button>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <div class="container mt-4 main" id="main" role="main">
+    <div class="container mt-4 main" id="main" role="main" aria-label="main">
         <article class="p-5 bg-white">
             <h1 class="text-primary text-center mb-4 title">Global temperature record shows 2016 as the warmest year on record</h1>
             <div class="text-center wrapper" role="figure" aria-labelledby="caption">
@@ -175,14 +200,14 @@
         </article>
     </div>
 
-    <footer id="footer" class="container-fluid bg-dark mt-4 footer" aria-label="footer">
+    <footer class="container-fluid bg-dark mt-4 footer" id="footer" role="contentinfo" aria-label="contentinfo">
         <div class="container text-center py-3">
             <div class="row justify-content-around">
-                <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=About">About</a>
-                <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Contact+us">Contact us</a>
-                <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Help">Help</a>
-                <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Terms+of+services">Terms of service</a>
-                <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Privacy+policy">Privacy policy</a>
+                <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=About" role="button">About</a>
+                <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Contact+us" role="button">Contact us</a>
+                <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Help" role="button">Help</a>
+                <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Terms+of+services" role="button">Terms of service</a>
+                <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Privacy+policy" role="button">Privacy policy</a>
             </div>
         </div>
     </footer>
