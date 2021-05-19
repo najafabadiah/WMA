@@ -178,3 +178,25 @@ document.addEventListener('DOMContentLoaded', function() {
         .getElementById('register-register-button')
         .addEventListener('click', register, false);
 }, false);
+
+function validate() {
+    var hasError = false;
+    var emailControl = document.getElementById('login-email-control');
+    var emialError = document.getElementById('login-email-error');
+    if (!emailControl.validity.valid) {
+    // Add detailed error message
+    emialError.innerHTML = 'Please correct the errors';
+    } else {
+    // Remove detailed error message
+    emialError.innerHTML = '';
+    }
+    // More validation logic omitted here
+    
+    var errorHeading = document.getElementById('login-error');
+    if (hasError) {
+    // Add error notification
+    errorHeading.innerHTML = 'Please correct the errors';
+    } else {
+    errorHeading.innerHTML = ''; // Remove error notification
+    }
+}
