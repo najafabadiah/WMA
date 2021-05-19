@@ -99,3 +99,7 @@ body a:hover {
 .skip-to-content a:focus, .skip-to-content a:active {
     position: static;
 }
+
+h2 a:hover,p a:hover {
+  color:#6c757d;
+}
