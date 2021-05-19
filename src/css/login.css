@@ -1,1 +1,24 @@
+#register-address-legend,
+#register-basic-legend {
+    font-size: 1.2rem;
+}
 
+#register-form .form-group label {
+    margin-bottom: 1rem;
+}
+#login-form .form-group label {
+    margin-bottom: 0rem !important;
+}
+
+.text-muted {
+    color: #525558;
+}
+
+.invalid-feedback {
+    margin-top: .8rem;
+    font-size: 100%;
+}
+
+#login-form .text-secondary {
+    color: #53585b !important;
+}
