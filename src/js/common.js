@@ -21,6 +21,14 @@ function openMenu(event) {
     }
 }
 
+    var elem = ".dropdown-menu";
+    $( document ).on( 'keydown', function ( e ) {
+        if ( e.keyCode === 27 ) { // ESC
+            $( elem ).slideUp(".dropdown-menu");
+
+        }
+    });
+
 /**
  * Toggle the navigation content
  * @param {object} event - The DOM event
@@ -73,7 +81,6 @@ document.getElementById("font-decrease-button").addEventListener("click", functi
 document.getElementById("font-decrease-button-1").addEventListener("click", function() {
   changeFontSize(-1);
 });
-
 
 document
     .querySelectorAll('.dropdown > a') // Select the menu element
