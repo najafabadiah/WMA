@@ -25,7 +25,7 @@
 .skip-to-content a:focus, .skip-to-content a:active {
   position: static;
 }
-
+/*
 a:focus {
   border: 0.1px dashed #6E6B6D;
-}
+}*/
