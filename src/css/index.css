@@ -10,3 +10,22 @@
 .studies li {
     margin-top: 1.2rem
 }
+
+.skip-to-content {
+  text-align: left;
+}
+
+.skip-to-content a {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-to-content a:focus, .skip-to-content a:active {
+  position: static;
+}
+/*
+a:focus {
+  border: 0.1px dashed #6E6B6D;
+}*/

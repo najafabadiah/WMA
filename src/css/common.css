@@ -10,7 +10,7 @@ html {
 body a,
 body div,
 body p {
-    color: #4b6660
+    color: #494440;
 }
 
 body a:hover {
@@ -54,4 +54,54 @@ body a:hover {
 
 .main {
     flex: 1 0 auto
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffffbf;
+}
+
+.nav-item > a:focus {
+    border: 2px rgb(28, 190, 240) solid;
+}
+
+.font-increase-button,
+.font-decrease-button {
+    border-style: none;
+    color: #ffffffbf;
+}
+
+#font-increase-button {
+    font-size: large;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 1px #f8f9fa solid;
+}
+
+#font-decrease-button {
+    font-size: smaller;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 1px #f8f9fa solid;
+
+}
+
+#font-increase-button-1,
+#font-decrease-button-1 {
+    border: 2px solid white;
+    margin-bottom: 5px;
+}
+
+.skip-to-content {
+    text-align: left;
+}
+  
+.skip-to-content a {
+    position: fixed;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-to-content a:focus, .skip-to-content a:active {
+    position: static;
 }
