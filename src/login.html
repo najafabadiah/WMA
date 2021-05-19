@@ -12,13 +12,19 @@
 </head>
 
 <body class="bg-light">
-    <div class="container-fluid d-none d-lg-block my-4 header" role="banner">
+    <div class="skip-to-content">
+        <!-- The anchor points to the id of the element -->
+      <a href="#main">Skip to main content</a>
+      <a href="#footer">Skip to footer</a>
+    </div>
+
+    <div class="container-fluid d-none d-lg-block my-4 header" role="banner" aria-label="banner">
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-8 media">
-                    <img class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg" alt="logo the website">
+                    <img class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg" alt="logo of the website" role="img">
                     <div class="media-body align-self-center">
-                        <div class="mb-0 title">Lorem Ipsum
+                        <div class="mb-0 title" role="heading">Lorem Ipsum
                             <br>Institute of Technology
                         </div>
                     </div>
@@ -26,8 +32,8 @@
                 <div class="col-4">
                     <div class="btn-toolbar justify-content-end">
                         <div class="btn-group btn-group-sm">
-                            <button class="btn-lg btn-dark font-increase-button" id="font-increase-button">A+</button>
-                            <button class="btn-lg btn-dark font-decrease-button" id="font-decrease-button">A-</button>
+                            <button class="btn-lg btn-dark font-increase-button" id="font-increase-button" aria-label="increase the font size">A+</button>
+                            <button class="btn-lg btn-dark font-decrease-button" id="font-decrease-button" aria-label="decrease the font size">A-</button>
                         </div>
                     </div>
                 </div>
@@ -35,16 +41,16 @@
         </div>
     </div>
 
-    <div class="container-fluid bg-dark nav">
+    <nav class="container-fluid bg-dark nav" role="navigation" aria-label="navigation">
         <div class="container">
             <div class="navbar navbar-dark bg-dark navbar-expand-lg px-0">
                 <div class="navbar-brand d-lg-none">
-                    <img class="rounded-right" src="./img/logo.jpg" width="40" height="40" alt="logo the website">
+                    <img class="rounded-right" src="./img/logo.jpg" width="40" height="40" alt="logo of the website" role="img">
                 </div>
                 <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon" aria-label="Toggle Button"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="nav-bar-content" role="navigation" aria-label="Main Navigation">
+                <div class="collapse navbar-collapse" id="nav-bar-content" aria-label="Main Navigation">
                     <ul class="navbar-nav mr-auto" aria-label="Main menu">
                         <li class="nav-item">
                             <a class="nav-link" href="./" role="button">Homepage</a>
@@ -117,9 +123,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </nav>
 
-    <div class="container main" id="main" role="main">
+    <main class="container main" id="main" role="main" aria-label="main">
         <div class="row no-gutters">
             <div class="col-12 col-md-5 mt-4 login">
                 <div class="p-4 mr-md-3 bg-white">
@@ -127,22 +133,24 @@
                         <legend>
                             <div class="text-primary mb-4 title">Login</div>
                         </legend>
-                        <div class="text-danger mb-4 d-none subtitle" id="login-error" aria-live="assertive">Incorrect username or password.</div>
+                        <div class="text-danger mb-4 d-none subtitle" id="login-error" aria-live="assertive">Please correct the error(s)</div>
                         <ul class="sr-only" id="login-error-list"></ul>
-                        <form id="login-form" novalidate>
+                        <form id="login-form" novalidate aria-label="login form">
                             <div class="form-group">
+                                <label for="login-email-control">Email
+                                    <small class="text-secondary">(required)</small>
+                                </label>
                                 <input class="form-control" id="login-email-control" type="email" placeholder="Email" required aria-required="true" style="position: relative; top: 10px;">
-                                <label style="position: relative; top: -60px;" for="login-email-control">Email</label>
-                                <small class="invalid-feedback"></small>
+                                <small class="invalid-feedback" id="login-email-error"></small>
                             </div>
                             <div class="form-group">
+                                <label for="login-password-control">Password</label>
                                 <input class="form-control" id="login-password-control" type="password" placeholder="Password" aria-required="true" style="position: relative; top: 10px;">
-                                <label style="position: relative; top: -60px;" for="login-password-control">Password</label>
-                                <small class="invalid-feedback"></small>
+                                <small class="invalid-feedback" id="login-password-error"></small>
                             </div>
                             <div class="form-group">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="remember" id="login-remmeber-control">
+                                    <input class="form-check-input" type="checkbox" value="remember" id="login-remmeber-control" role="checkbox" aria-checked="false">
                                     <label class="form-check-label" for="login-remmeber-control">Keep me logged in</label>
                                 </div>
                             </div>
@@ -161,7 +169,7 @@
                         </legend>
                         <div class="text-danger mb-4 d-none subtitle" id="register-error" aria-live="assertive">Please correct the error(s)</div>
                         <ul class="sr-only" id="register-error-list"></ul>
-                        <form id="register-form" novalidate>
+                        <form id="register-form" novalidate aria-label="registration form">
                             <div class="form-group">
                                 <fieldset>
                                     <legend>
@@ -173,23 +181,23 @@
                                         <div class="form-group col-12 col-lg-6">
                                             <label class="form-label" for="register-first-name-control">First name</label>
                                             <input class="form-control" type="text" id="register-first-name-control" placeholder="First name" required aria-required="true">
-                                            <small class="invalid-feedback"></small>
+                                            <small class="invalid-feedback" id="register-first-name-error"></small>
                                         </div>
                                         <div class="form-group col-12 col-lg-6">
                                             <label for="register-last-name-control">Last name</label>
                                             <input class="form-control" type="text" id="register-last-name-control" placeholder="Last name" required aria-required="true">
-                                            <small class="invalid-feedback"></small>
+                                            <small class="invalid-feedback" id="register-last-name-error"></small>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="register-email-control">Email</label>
                                         <input class="form-control" id="register-email-control" type="email" placeholder="Email" required aria-required="true">
-                                        <small class="invalid-feedback"></small>
+                                        <small class="invalid-feedback" id="register-email-error"></small>
                                     </div>
                                     <div class="form-group">
                                         <label for="register-password-control">Password</label>
                                         <input class="form-control" id="register-password-control" type="password" placeholder="Password" required aria-required="true">
-                                        <small class="invalid-feedback"></small>
+                                        <small class="invalid-feedback" id="register-password-error"></small>
                                         <small id="register-password-help" class="form-text text-muted">Your password must be 8-16 characters long and contain both letters and numbers.</small>
                                     </div>
                                     <div class="form-group">
@@ -201,7 +209,7 @@
                                             <option value="continuing">Continuing education</option>
                                             <option value="doctorate">Doctorate</option>
                                         </select>
-                                        <small class="invalid-feedback"></small>
+                                        <small class="invalid-feedback" id="register-programme-error"></small>
                                     </div>
                                 </fieldset> 
                             </div>
@@ -239,9 +247,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
-    <div class="container-fluid bg-dark mt-4 footer" role="contentinfo">
+    <footer class="container-fluid bg-dark mt-4 footer" id="footer" role="contentinfo" aria-label="contentinfo">
         <div class="container text-center py-3">
             <div class="row justify-content-around">
                 <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=About" role="button">About</a>
@@ -251,7 +259,7 @@
                 <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Privacy+policy" role="button">Privacy policy</a>
             </div>
         </div>
-    </div>
+    </footer>
 
     <script type="text/javascript" src="./js/jquery.js"></script>
     <script type="text/javascript" src="./js/popper.js"></script>

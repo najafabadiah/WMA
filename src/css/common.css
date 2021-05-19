@@ -60,6 +60,10 @@ body a:hover {
     color: #ffffffbf;
 }
 
+.nav-item > a:focus {
+    border: 2px rgb(28, 190, 240) solid;
+}
+
 .font-increase-button,
 .font-decrease-button {
     border-style: none;
@@ -85,4 +89,19 @@ body a:hover {
 #font-decrease-button-1 {
     border: 2px solid white;
     margin-bottom: 5px;
+}
+
+.skip-to-content {
+    text-align: left;
+}
+  
+.skip-to-content a {
+    position: fixed;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-to-content a:focus, .skip-to-content a:active {
+    position: static;
 }
