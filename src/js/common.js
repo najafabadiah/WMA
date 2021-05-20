@@ -158,6 +158,7 @@ document
                         //alert("open");
                         navElement.setAttribute('aria-expanded', "false");
                         element.parentNode.parentNode.classList.remove("show");
+                        navElement.focus();
                     }
                 } 
                 event.preventDefault();
