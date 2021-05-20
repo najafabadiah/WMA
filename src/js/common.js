@@ -139,7 +139,7 @@ document
 });
 
 document
-    .querySelectorAll('.dropdown > a') // Select the menu element
+    .querySelectorAll('.nav-item > a') // Select the menu element
     .forEach(element => {
         element.addEventListener('focusin', function(event) { // Add event listener
             CollapseDropdownMenu();

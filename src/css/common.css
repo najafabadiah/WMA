@@ -55,7 +55,8 @@ body a:hover {
     color: #ffffffbf;
 }
 
-.nav-item > a:focus {
+.nav-item > a:focus,
+.nav-item > a:hover {
     border: 2px rgb(28, 190, 240) solid;
 }
 
